@@ -1,0 +1,1461 @@
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Barcelona Club Events</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+            <style>
+                .event-card {
+                    transition: transform 0.2s;
+                    height: 100%;
+                    border: none;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    background: #000;
+                }
+                .event-card:hover {
+                    transform: scale(1.02);
+                    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+                }
+                .image-container {
+                    position: relative;
+                    width: 100%;
+                    min-height: 300px;
+                    max-height: 400px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    border-radius: 8px 8px 0 0;
+                    background: #000;
+                }
+                .event-image {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: scale-down;
+                    padding: 10px;
+                }
+                .venue-badge {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    background-color: rgba(0,0,0,0.7);
+                    color: white;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    font-size: 0.85rem;
+                    z-index: 2;
+                }
+                .card-body {
+                    padding: 1.25rem;
+                    background-color: white;
+                    border-radius: 0 0 8px 8px;
+                }
+                .card-title {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.5rem;
+                    color: #2c3e50;
+                }
+                .address-text {
+                    font-size: 0.85rem;
+                    color: #6c757d;
+                    margin-bottom: 0;
+                }
+                .container {
+                    max-width: 1400px;
+                }
+                .page-title {
+                    color: #2c3e50;
+                    font-weight: 600;
+                    margin-bottom: 2rem;
+                }
+                .date-header {
+                    background-color: #f8f9fa;
+                    padding: 15px 20px;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+                }
+                .date-text {
+                    color: #2c3e50;
+                    font-weight: 500;
+                }
+                .row {
+                    margin-right: -10px;
+                    margin-left: -10px;
+                }
+                .col {
+                    padding: 10px;
+                }
+                .card-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 0.5rem;
+                }
+                
+                .card-title {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: #2c3e50;
+                    margin: 0;
+                    flex: 1;
+                    padding-right: 10px;
+                }
+                
+                .venue-name {
+                    font-size: 0.85rem;
+                    color: white;
+                    white-space: nowrap;
+                    background-color: rgba(0,0,0,0.8);
+                    padding: 5px 12px;
+                    border-radius: 20px;
+                    margin-left: 10px;
+                }
+            </style>
+        </head>
+        <body class="bg-light">
+            <div class="container py-5">
+                <h1 class="text-center page-title">Barcelona Club Events</h1>
+        
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Wednesday, January 01, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/agenda" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://via.placeholder.com/800x600?text=No+Image" class="event-image" alt="03.">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">03.</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/agenda" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/artists/2024D/Kwartz-A.jpg" class="event-image" alt="Torax: Kwartz + P.E.A.R.L. + Beste Hira + Anabel Arroyo">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Torax: Kwartz + P.E.A.R.L. + Beste Hira + Anabel Arroyo</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/sight-nyd---marco-faraone-bizza-b2b-nacho-scoppa-en-pacha-barcelona-01-01-2025-S02V" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/ec511385-6891-4d1d-968f-af4d269a5c00/w=1350" class="event-image" alt="Sight Nyd   Marco Faraone Bizza B2B Nacho Scoppa">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Sight Nyd   Marco Faraone Bizza B2B Nacho Scoppa</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Thursday, January 02, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-main-concierto-extra/corona-night/2025-01-02/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6723d04f9d6eea778c676b3e_JUEVES-TQ.jpg" class="event-image" alt="Corona Night">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Corona Night</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/bae-02-01-2025-WHID" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/4444aca2-6427-45a8-0559-b882817b5000/w=1350" class="event-image" alt="Bae">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Bae</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/puro-perreo-102/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/01/BCN-1.jpg" class="event-image" alt="PURO  PERREO">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">PURO  PERREO</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, January 03, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.notikumi.com/2025/1/3/razzclubs-3-de-enero-de-2025" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/artists/2023A/SUSHINIGAMI2023.png" class="event-image" alt="Sushinigami + Dirtilarita">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Sushinigami + Dirtilarita</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/03-01-2025/cristian-de-moret" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/concerts/BOLUS24/cristiandemoret1.jpg" class="event-image" alt="CRISTIAN DE MORET">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">CRISTIAN DE MORET</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/agenda" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://via.placeholder.com/800x600?text=No+Image" class="event-image" alt="04.">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">04.</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/epic-friday/2025-01-03/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f9467f22f147d27309488_VIERNES-TQ.jpg" class="event-image" alt="Epic Friday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Epic Friday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/black-dragon-165/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/12/MORAD.jpg" class="event-image" alt="MORAD @ SHOKO  BARCELONA">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">MORAD @ SHOKO  BARCELONA</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/03-01-2025/piratas-rumbversions-fijate-tour" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/concerts/BOLUS24/PiratasRumbversions1.jpg" class="event-image" alt="PIRATAS RUMBVERSIONS">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">PIRATAS RUMBVERSIONS</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Saturday, January 04, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/04-01-2025/eduard-iniesta" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/concerts/BOLUS24/eduard-iniesta-v2.jpg" class="event-image" alt="EDUARD INIESTA">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">EDUARD INIESTA</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.notikumi.com/2025/1/4/razzmatazz-clubs-04-de-enero-de-2025" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/artists/2024D/omaks.jpg" class="event-image" alt="Kompound: OMAKS + MARCO LECKBERT + CRIME">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Kompound: OMAKS + MARCO LECKBERT + CRIME</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/agenda" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://via.placeholder.com/800x600?text=No+Image" class="event-image" alt="05.">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">05.</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/pure-shoko-151/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/PURE-SHOKO-WEB-BCN-generico.jpg" class="event-image" alt="PURE  SHÔKO">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">PURE  SHÔKO</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/crazy-saturday/2025-01-04/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f948ed81c5dea922e90d2_SABADO-TQ.jpg" class="event-image" alt="Crazy Saturday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Crazy Saturday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Sunday, January 05, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.salarazzmatazz.com/en/agenda" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://via.placeholder.com/800x600?text=No+Image" class="event-image" alt="08.">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">08.</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.notikumi.com/2025/1/5/la-troupe" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/artists/2025A/Troupe_.jpg" class="event-image" alt="La Prohibida + La Terremoto de Alcorcón + Kika Lorace. Djs: Albertoto + Chica B + Ferdiyei + Los Pinchaores + Muerta Sánchez">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">La Prohibida + La Terremoto de Alcorcón + Kika Lorace. Djs: Albertoto + Chica B + Ferdiyei + Los Pinchaores + Muerta Sánchez</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/level-up-154/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/LEVEL-UP-BCN-generico.jpg" class="event-image" alt="LEVEL  UP">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">LEVEL  UP</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-sky/crossover-sunday/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6756e6e035cbe970b24858d9_CROSSOVER-SUNDAY-MAIN-TQ.jpg" class="event-image" alt="CROSSOVER SUNDAY">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">CROSSOVER SUNDAY</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Monday, January 06, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/fucking-monday-by-shoko-mondaze-46/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/Imagen-de-WhatsApp-2024-05-14-a-las-10.15.33_fcfa7abf.jpg" class="event-image" alt="FUCKING MONDAY  BY SHÔKO MONDAZE">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">FUCKING MONDAY  BY SHÔKO MONDAZE</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/vibra-06-01-2025-6SET" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/763a1fb5-a296-4952-c69d-f26009748c00/w=1350" class="event-image" alt="Vibra">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Vibra</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Tuesday, January 07, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/kiss-kiss-bang-bang-126/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/KISS-KISS-WEB-BCN-1-martes.jpg" class="event-image" alt="KISS KISS  BANG BANG">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">KISS KISS  BANG BANG</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/flirt-07-01-2025-ZNNJ" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/46cea518-cbb3-445f-81a2-dbd8ecb8f200/w=1350" class="event-image" alt="Flirt">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Flirt</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Wednesday, January 08, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.notikumi.com/2025/1/8/el-dirty-ataque-alien" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://www.salarazzmatazz.com/storage/artists/2024A/room1Dirty24web.jpg" class="event-image" alt="Purpur & Perotutehasvisto + La Waldorf + Dancers">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Purpur & Perotutehasvisto + La Waldorf + Dancers</h5>
+                                        <span class="venue-name">Razzmatazz</span>
+                                    </div>
+                                    <p class="address-text">C/ Pamplona 88, 1er piso, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/pop-that-party-146/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/04/pop-that-party.jpg" class="event-image" alt="POP THAT  PARTY">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">POP THAT  PARTY</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/full-party-08-01-2025-6MVC" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/94e07b84-90de-4ca4-1875-12bb4afa1a00/w=1350" class="event-image" alt="Full Party">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Full Party</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Thursday, January 09, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-main-concierto-extra/corona-night/2025-01-09/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6723d04f9d6eea778c676b3e_JUEVES-TQ.jpg" class="event-image" alt="Corona Night">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Corona Night</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/bae-09-01-20251-9PPM" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/0537f6e6-6343-41c3-2c4e-e9bd6a772300/w=1350" class="event-image" alt="Bae1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Bae1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/puro-perreo-103/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/01/BCN-1.jpg" class="event-image" alt="PURO  PERREO">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">PURO  PERREO</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, January 10, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/black-dragon-166/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/BLACK-DRAGON-BCN-generico.jpg" class="event-image" alt="BLACK  DRAGON">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">BLACK  DRAGON</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/epic-friday/2025-01-10/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f9467f22f147d27309488_VIERNES-TQ.jpg" class="event-image" alt="Epic Friday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Epic Friday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Saturday, January 11, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/crazy-saturday/2025-01-11/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f948ed81c5dea922e90d2_SABADO-TQ.jpg" class="event-image" alt="Crazy Saturday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Crazy Saturday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/pure-shoko-152/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/PURE-SHOKO-WEB-BCN-generico.jpg" class="event-image" alt="PURE  SHÔKO">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">PURE  SHÔKO</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Sunday, January 12, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-sky/crossover-sunday/2025-01-12/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6756e6e035cbe970b24858d9_CROSSOVER-SUNDAY-MAIN-TQ.jpg" class="event-image" alt="CROSSOVER SUNDAY">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">CROSSOVER SUNDAY</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/level-up-155/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/LEVEL-UP-BCN-generico.jpg" class="event-image" alt="LEVEL  UP">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">LEVEL  UP</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Monday, January 13, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/vibra-13-01-20251-1JTS" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/fc358ea0-3490-4f85-a0e1-aa33860c2100/w=1350" class="event-image" alt="Vibra1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Vibra1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://shoko.biz/en/event/fucking-monday-by-shoko-mondaze-47/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://shoko.biz/wp-content/uploads/2024/05/Imagen-de-WhatsApp-2024-05-14-a-las-10.15.33_fcfa7abf.jpg" class="event-image" alt="FUCKING MONDAY  BY SHÔKO MONDAZE">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">FUCKING MONDAY  BY SHÔKO MONDAZE</h5>
+                                        <span class="venue-name">Shoko</span>
+                                    </div>
+                                    <p class="address-text">Passeig marítim de la Barceloneta, 36 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Tuesday, January 14, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/flirt-14-01-20251-USVT" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/e5bde31b-e844-461a-e59b-2bd86ae9f000/w=1350" class="event-image" alt="Flirt1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Flirt1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Wednesday, January 15, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/full-party-15-01-20251-L6RH" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/edf9c41c-5f98-44f0-389d-0d64a9c75000/w=1350" class="event-image" alt="Full Party1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Full Party1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Thursday, January 16, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/bae-16-01-20251-CJWV" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/e8039276-95fa-458d-25af-5a36cbf3aa00/w=1350" class="event-image" alt="Bae1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Bae1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-main-concierto-extra/corona-night/2025-01-16/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6723d04f9d6eea778c676b3e_JUEVES-TQ.jpg" class="event-image" alt="Corona Night">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Corona Night</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, January 17, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/epic-friday/2025-01-17/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f9467f22f147d27309488_VIERNES-TQ.jpg" class="event-image" alt="Epic Friday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Epic Friday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Saturday, January 18, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/crazy-saturday/2025-01-18/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f948ed81c5dea922e90d2_SABADO-TQ.jpg" class="event-image" alt="Crazy Saturday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Crazy Saturday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Sunday, January 19, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-sky/crossover-sunday/2025-01-19/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6756e6e035cbe970b24858d9_CROSSOVER-SUNDAY-MAIN-TQ.jpg" class="event-image" alt="CROSSOVER SUNDAY">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">CROSSOVER SUNDAY</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Monday, January 20, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/vibra-20-01-20251-HX4Q" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/43267d05-9cd6-4e27-556d-19fe9e801c00/w=1350" class="event-image" alt="Vibra1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Vibra1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Tuesday, January 21, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/flirt-21-01-20251-T9VM" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/fd22ee4e-75df-4028-fcee-536f63bd0300/w=1350" class="event-image" alt="Flirt1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Flirt1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Wednesday, January 22, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/full-party-22-01-20251-5N08" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/7139689c-b6df-4022-2841-12e20bdf2c00/w=1350" class="event-image" alt="Full Party1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Full Party1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Thursday, January 23, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-main-concierto-extra/corona-night/2025-01-23/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6723d04f9d6eea778c676b3e_JUEVES-TQ.jpg" class="event-image" alt="Corona Night">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Corona Night</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/bae-23-01-20251-DXVU" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/ace04328-9427-46f1-ab9d-6139431ede00/w=1350" class="event-image" alt="Bae1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Bae1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, January 24, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/epic-friday/2025-01-24/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f9467f22f147d27309488_VIERNES-TQ.jpg" class="event-image" alt="Epic Friday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Epic Friday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Saturday, January 25, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/sala-main-sala-sky/crazy-saturday/2025-01-25/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/671f948ed81c5dea922e90d2_SABADO-TQ.jpg" class="event-image" alt="Crazy Saturday">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Crazy Saturday</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Sunday, January 26, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-sky/crossover-sunday/2025-01-26/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6756e6e035cbe970b24858d9_CROSSOVER-SUNDAY-MAIN-TQ.jpg" class="event-image" alt="CROSSOVER SUNDAY">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">CROSSOVER SUNDAY</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Monday, January 27, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/vibra-27-01-20251-M6SH" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/6bd5e525-d5b6-4731-2b5f-2437a59f1800/w=1350" class="event-image" alt="Vibra1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Vibra1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Tuesday, January 28, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/flirt-28-01-20251-VLRC" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/754fd38a-dc9f-4752-7ade-2bb2e8eafe00/w=1350" class="event-image" alt="Flirt1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Flirt1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Wednesday, January 29, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/full-party-29-01-20251-S7KH" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/5f7c6d96-9202-45f1-b0d9-31565b176e00/w=1350" class="event-image" alt="Full Party1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Full Party1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Thursday, January 30, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://www.fourvenues.com/en/pacha-barcelona/events/bae-30-01-20251-ZUGW" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://fourvenues.com/cdn-cgi/imagedelivery/kWuoTchaMsk7Xnc_FNem7A/575bef26-4263-4aef-509f-fddfd712a500/w=1350" class="event-image" alt="Bae1">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Bae1</h5>
+                                        <span class="venue-name">Pacha</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Ramon Trias Fargas, 2, 08005 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-barcelona-sala-main-concierto-extra/corona-night/2025-01-30/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6723d04f9d6eea778c676b3e_JUEVES-TQ.jpg" class="event-image" alt="Corona Night">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">Corona Night</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, January 31, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-sala-main-mesas-gral-zona-2/amilcar-boscan-y-pedro-arroyo/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/676581c4d7641ee5d00265ee_AMILCAR-BOSCAN-Y-PEDRO-ARROYO-TQ.jpg" class="event-image" alt="AMILCAR BOSCAN Y PEDRO ARROYO">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">AMILCAR BOSCAN Y PEDRO ARROYO</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, February 07, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-sala-main-mesas-gral-zona-2/hebert-vargas/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/675c35967061d012ab41bb98_HEBERT-VARGAS-2025-TQ.png" class="event-image" alt="HEBERT VARGAS">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">HEBERT VARGAS</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, March 21, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-sala-main-mesas-gral-zona-2/los-inquietos-del-vallenato/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6765820d459d47af4f8380ee_LOS-INQUIETOS-TQ.png" class="event-image" alt="LOS INQUIETOS DEL VALLENATO">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">LOS INQUIETOS DEL VALLENATO</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Friday, April 04, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-sala-main-mesas-gral-zona-2/charlie-aponte/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/6745cdc6df92a25b58ba0774_CHARLIE-APONTE-BCN-TQ.png" class="event-image" alt="CHARIE APONTE">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">CHARIE APONTE</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+                <div class="date-header">
+                    <h2 class="h4 mb-0 date-text">Wednesday, April 30, 2025</h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+            
+                    <div class="col">
+                        <a href="https://tickets.latinpalacebarcelona.com/es/latin-palace-sala-main-mesas-gral-zona-2/guayacan/" target="_blank" class="text-decoration-none">
+                            <div class="card event-card">
+                                <div class="image-container">
+                                    <img src="https://cdn.prod.website-files.com/63888f011f38e4a0b6129894/674db9ac5540d028e2e4f028_GUAYACAN-BCN-TQ.png" class="event-image" alt="GUAYACAN">
+                                </div>
+                                <div class="card-body">
+                                    <div class="card-header">
+                                        <h5 class="card-title">GUAYACAN</h5>
+                                        <span class="venue-name">Latin Palace</span>
+                                    </div>
+                                    <p class="address-text">Carrer de Tànger, 66, 08018 Barcelona</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                
+                </div>
+            
+            </div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
+        </html>
+        
